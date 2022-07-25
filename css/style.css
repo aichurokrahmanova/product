@@ -18,6 +18,7 @@ body {
 }
 
 #header {
+  padding-top: 30px;
   margin-bottom: 30px;
 }
 #header .header-general {
@@ -25,7 +26,11 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-#header .header-general__logo {
+#header .header-general #toggler,
+#header .header-general .header-general__label {
+  display: none;
+}
+#header .header-general__wrapper__logo {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -34,20 +39,22 @@ body {
   margin-left: 50px;
   margin-top: -40px;
 }
-#header .header-general__nav {
+#header .header-general__block__nav {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   color: #22343D;
   padding: 0 10px;
+  list-style: none;
 }
-#header .header-general__nav:hover {
+#header .header-general__block__nav:hover {
   border-bottom: 2px solid #05f5da;
   width: 100%;
   transition: 0.5s;
 }
-#header .header-general .btn-12 {
+
+.btn-12 {
   position: relative;
   right: 20px;
   bottom: 20px;
@@ -59,13 +66,14 @@ body {
   -webkit-perspective: 230px;
   perspective: 230px;
 }
-#header .header-general .btn-12 span {
+
+.btn-12 span {
   background: #13c0ad;
   color: #f7f9fc;
   display: block;
   position: absolute;
   padding: 5px 30px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 0;
   text-align: center;
@@ -75,7 +83,8 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-#header .header-general .btn-12 span:nth-child(1) {
+
+.btn-12 span:nth-child(1) {
   box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -84,7 +93,8 @@ body {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
-#header .header-general .btn-12 span:nth-child(2) {
+
+.btn-12 span:nth-child(2) {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
@@ -92,14 +102,16 @@ body {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
-#header .header-general .btn-12:hover span:nth-child(1) {
-  box-shadow: inset 2px 2px 2px 0px rgba(199, 192, 192, 0.99), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+
+.btn-12:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0 rgba(199, 192, 192, 0.99), 7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
   cursor: pointer;
 }
-#header .header-general .btn-12:hover span:nth-child(2) {
+
+.btn-12:hover span:nth-child(2) {
   background: transparent;
   color: transparent;
   box-shadow: none;
@@ -109,7 +121,8 @@ body {
   transform: rotateX(-90deg);
   cursor: pointer;
 }
-#header .header-general .btn-13 {
+
+.btn-13 {
   position: relative;
   right: 20px;
   bottom: 20px;
@@ -122,13 +135,14 @@ body {
   perspective: 230px;
   margin-left: 150px;
 }
-#header .header-general .btn-13 span {
+
+.btn-13 span {
   background: #f5f6f6;
   color: #13c0ad;
   display: block;
   position: absolute;
   padding: 5px 30px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 2px 0 rgba(255, 255, 255, 0.5), 7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 0;
   text-align: center;
@@ -138,7 +152,8 @@ body {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-#header .header-general .btn-13 span:nth-child(1) {
+
+.btn-13 span:nth-child(1) {
   box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, 0.6), -4px -4px 5px 0px rgba(255, 255, 255, 0.6), 7px 7px 20px 0px rgba(0, 0, 0, 0.1333333333), 4px 4px 5px 0px rgba(0, 0, 0, 0.0666666667);
   -webkit-transform: rotateX(90deg);
   -moz-transform: rotateX(90deg);
@@ -147,7 +162,8 @@ body {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
-#header .header-general .btn-12 span:nth-child(2) {
+
+.btn-12 span:nth-child(2) {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
@@ -155,14 +171,16 @@ body {
   -moz-transform-origin: 50% 50% -20px;
   transform-origin: 50% 50% -20px;
 }
-#header .header-general .btn-13:hover span:nth-child(1) {
-  box-shadow: inset 2px 2px 2px 0px rgba(199, 192, 192, 0.99), 7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+
+.btn-13:hover span:nth-child(1) {
+  box-shadow: inset 2px 2px 2px 0 rgba(199, 192, 192, 0.99), 7px 7px 20px 0 rgba(0, 0, 0, 0.1), 4px 4px 5px 0 rgba(0, 0, 0, 0.1);
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   transform: rotateX(0deg);
   cursor: pointer;
 }
-#header .header-general .btn-13:hover span:nth-child(2) {
+
+.btn-13:hover span:nth-child(2) {
   background: transparent;
   color: transparent;
   box-shadow: none;
@@ -276,13 +294,12 @@ body {
   background: #02897A;
   border-radius: 4px;
   padding: 15px 35px;
-  border: none;
+  border: 2px solid #02897A;
 }
 #hero .hero-general__block__btn:hover {
   background: #f5f6f6;
   color: #02897A;
   transition: 0.7s;
-  border: 2px solid #02897A;
 }
 #hero .hero-general__block__line {
   background: #02897A;
@@ -297,11 +314,6 @@ body {
   font-size: 16px;
   text-decoration-line: underline;
   color: #02897A;
-}
-#hero .hero-general__block__title1:hover, #hero .hero-general__block__title1 iframe {
-  opacity: 1;
-  color: rgba(6, 253, 226, 0.45);
-  transition: 0.5s;
 }
 
 #about {
@@ -325,27 +337,27 @@ body {
   align-items: center;
   margin-bottom: 50px;
 }
-#about .about-general__block__blocks {
+#about .about-general__block__1__blocks {
   background: #02897A;
   border-radius: 15px;
   padding: 10px 15px;
 }
-#about .about-general__block__blocks1 {
+#about .about-general__block__1__blocks1 {
   background: #4D8DFF;
   border-radius: 15px;
   padding: 10px 15px;
 }
-#about .about-general__block__blocks2 {
+#about .about-general__block__1__blocks2 {
   background: #740A76;
   border-radius: 15px;
   padding: 10px 15px;
 }
-#about .about-general__block__blocks3 {
+#about .about-general__block__1__blocks3 {
   background: #F03E3D;
   border-radius: 15px;
   padding: 10px 15px;
 }
-#about .about-general__block__title1 {
+#about .about-general__block__1__title1 {
   font-style: normal;
   font-weight: 600;
   font-size: 22px;
@@ -353,7 +365,7 @@ body {
   margin-bottom: 5px;
   margin-top: 20px;
 }
-#about .about-general__block__desc {
+#about .about-general__block__1__desc {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -367,15 +379,14 @@ body {
   background: #02897A;
   border-radius: 4px;
   padding: 10px 30px;
-  border: none;
   margin-left: 500px;
   margin-bottom: 100px;
+  border: 2px solid #02897A;
 }
 #about .about-general__btn:hover {
   background: #f5f6f6;
   color: #02897A;
   transition: 0.7s;
-  border: 2px solid #02897A;
 }
 
 #management {
@@ -574,10 +585,15 @@ body {
   background: #02897A;
   border-radius: 4px;
   padding: 10px 30px;
-  border: none;
+  border: 2px solid #02897A;
   margin-left: 450px;
   margin-bottom: 100px;
   margin-top: 30px;
+}
+#easy .easy-general__btn:hover {
+  color: #02897A;
+  background: #FFFFFF;
+  transition: 0.5s;
 }
 #easy .easy-general__block {
   display: flex;
@@ -758,9 +774,14 @@ body {
   background: #02897A;
   border-radius: 8px;
   padding: 10px 20px;
-  border: none;
+  border: 2px solid #02897A;
   margin-left: 80px;
   margin-top: 30px;
+}
+#table .table-general__block__wrapper__btn:hover {
+  background: #FFFFFF;
+  color: #02897A;
+  transition: 0.5s;
 }
 #table .table-general__block__wrapper1 {
   background: #02897A;
@@ -918,8 +939,13 @@ body {
   color: #02897A;
   background: #FFFFFF;
   border-radius: 8px;
-  border: none;
+  border: 2px solid #f5f6f6;
   padding: 10px 30px;
+}
+#get .get-general__btn:hover {
+  background: #02897A;
+  color: #f5f6f6;
+  transition: 0.5s;
 }
 
 #footer .title {
@@ -1014,11 +1040,10 @@ body {
   background: #02897A;
   border-radius: 4px;
   padding: 10px 25px;
-  border: none;
+  border: 2px solid #02897A;
 }
 #footer .footer-general__wrapper__btn:hover {
   background: #FFFFFF;
-  border: #02897A;
   color: #02897A;
   transition: 0.5s;
 }
